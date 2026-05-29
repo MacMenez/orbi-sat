@@ -104,4 +104,11 @@ void loop()
     mpu.getEvent(&a, &g, &temp); // Obtém os eventos do acelerômetro, giroscópio e temperatura
     acelerometroGyroscopio(a, g, temp); // Chama a função para processar e imprimir os dados do acelerômetro e giroscópio
     delay(10);
+
+    /* INTERFACEAMENTO PARA APLICATIVO MOBILE */
+    /* Desenvolvimento de Dart + Flutter para aplicativo de apresentação para celulares. Modelo de representação de pitch*/
+
+    /* INTERFACEAMENTO COM SERVIDORES - Firebase, mosquitto.org ou equivalente*/
+    /* Desenvolver envio de informações para base de servidores e reaproveitar os dados de forma prática
+    Aplicar conceitos de IoT para comunicação e aplicações a respeito dos sensores e aplicações*/
 }
