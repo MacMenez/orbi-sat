@@ -1,3 +1,37 @@
+/*
+    MAPA DOS PINOS
+
+    SENSOR DE ACELERAÇÃO E GIRO MPU-6050:
+        - SCL: GPIO 22
+        - SDA: GPIO 21
+        - INT: GPIO 4 (opcional para detecção de movimento)
+        - XDA: GPIO 16 (opcional para comunicação I2C)
+        - XCL: GPIO 17 (opcional para comunicação I2C)
+        - ADO: GPIO 0 (Endereço I2C, pode ser conectado a GND ou 3.3V para definir o endereço do sensor)
+
+    SENSOR DE CORRENTE ACS712:
+        - VCC: 5V
+        - GND: GND
+        - OUT: GPIO 34 (entrada analógica para leitura do valor de corrente)
+
+    SENSOR DE PRESSÃO BMP280:
+        - VCC: 3.3V
+        - GND: GND
+        - SCL: GPIO 22 (I2C Clock)
+        - SDA: GPIO 21 (I2C Data)
+    
+    MÓDULO MICRO SD:
+        - VCC: 3.3V
+        - GND: GND
+        - CS: GPIO 5 (Chip Select)
+        - SCK: GPIO 18 (Serial Clock)
+        - MOSI: GPIO 23 (Master Out Slave In)
+        - MISO: GPIO 19 (Master In Slave Out)
+    
+    MAPA DO PROGRAMA:
+        - Configuração dos sensores (MPU-6050, ACS712, BMP280)
+*/
+
 /* CONTROLE ENERGÉTICO */
 
 /* FAZER PROCESSAMENTO PARALELO - */
