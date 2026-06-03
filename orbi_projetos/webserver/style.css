@@ -1,0 +1,22 @@
+*{
+    font-family: Helvetica; 
+    display: inline-block; 
+    margin: 0px auto; 
+    text-align: center;
+}
+
+body{
+    background-color: #f2f2f2;
+    margin-top: 50px;
+}
+
+h1{
+    color: #444444;
+    margin: 50px auto 30px;
+}
+
+p{
+    font-size: 24px;
+    color: #444444;
+    margin-bottom: 10px;
+}
