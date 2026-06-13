@@ -32,6 +32,35 @@
         - Configuração dos sensores (MPU-6050, ACS712, BMP280)
 */
 
+/* INÍCIO CONFIGURAÇÕES DE REDES */
+  #include <arduino.h>
+  #include <WiFi.h>
+  #include <PubSubClient.h>
+
+  #define ID_MQTT "IoT_PUC_SG_mqtt"  //id mqtt (para identificação de sessão)
+
+  // Informar dados de acesso à rede
+  // const char* SSID     = TOPICO_SUBSCRIBE_LOGIN_REDE_USUARIO;
+  // const char* PASSWORD = TOPICO_SUBSCRIBE_LOGIN_REDE_SENHA;
+  
+  // const char* SSID = "moto g(6) play 1143";  // SSID / nome da rede WI-FI que deseja se conectar
+  // const char* PASSWORD = "123456789";        // Senha da rede WI-FI que deseja se conectar
+
+  const char* SSID     =  "Menez"; // SSID / nome da rede WI-FI que deseja se conectar
+  const char* PASSWORD =  "best#menez"; // Senha da rede WI-FI que deseja se conectar
+  
+  // const char* SSID     =  "iPhone"; // SSID / nome da rede WI-FI que deseja se conectar
+  // const char* PASSWORD =  "12345678"; // Senha da rede WI-FI que deseja se conectar
+
+  // Informar daods de conexão do servidor
+  const char* BROKER_MQTT = "test.mosquitto.org";
+  int BROKER_PORT = 1883;  // Porta do Broker MQTT
+
+  //Variáveis e objetos globais
+  WiFiClient espClient;          // Cria o objeto espClient
+  PubSubClient MQTT(espClient);  // Instancia o Cliente MQTT passando o objeto espClient
+/* FIM CONFIGURAÇÕES DE REDES */
+
 /* CONTROLE ENERGÉTICO */
 
 /* FAZER PROCESSAMENTO PARALELO - */
