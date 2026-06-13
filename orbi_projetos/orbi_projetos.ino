@@ -46,8 +46,8 @@
   // const char* SSID = "moto g(6) play 1143";  // SSID / nome da rede WI-FI que deseja se conectar
   // const char* PASSWORD = "123456789";        // Senha da rede WI-FI que deseja se conectar
 
-  const char* SSID     =  "Menez"; // SSID / nome da rede WI-FI que deseja se conectar
-  const char* PASSWORD =  "best#menez"; // Senha da rede WI-FI que deseja se conectar
+  const char* SSID     =  "NOME_REDE"; // SSID / nome da rede WI-FI que deseja se conectar
+  const char* PASSWORD =  "SENHA"; // Senha da rede WI-FI que deseja se conectar
   
   // const char* SSID     =  "iPhone"; // SSID / nome da rede WI-FI que deseja se conectar
   // const char* PASSWORD =  "12345678"; // Senha da rede WI-FI que deseja se conectar
