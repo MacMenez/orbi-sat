@@ -1197,6 +1197,348 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Display_Graphic:EA_DOGS104B-A"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.842 11.684 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "EA_DOGS104B-A"
+				(at 1.524 11.684 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Display:EA_DOGS104X-A"
+				(at 0 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.lcd-module.com/fileadmin/eng/pdf/doma/dogs104e.pdf"
+				(at 10.16 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "LCD 4x10 character display blue transmissive background, +3.3V VDD, I2C or SPI"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "display LCD graphic"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*EA*DOGS104*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EA_DOGS104B-A_0_1"
+				(rectangle
+					(start -7.62 10.16)
+					(end 7.62 -10.16)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "EA_DOGS104B-A_1_1"
+				(pin input line
+					(at -10.16 7.62 0)
+					(length 2.54)
+					(name "SID"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "SOD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "SCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "~{RST}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "SA0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -7.62 0)
+					(length 2.54)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 7.62 0 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 7.62 -7.62 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 7.62 180)
+					(length 2.54)
+					(name "IM1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 5.08 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "MCU_Espressif:ESP32-S2"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5139,6 +5481,112 @@
 		)
 	)
 	(symbol
+		(lib_id "Display_Graphic:EA_DOGS104B-A")
+		(at 69.85 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0da68127-548f-4ca2-87d5-8810b5307f92")
+		(property "Reference" "U8"
+			(at 71.9933 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "EA_DOGS104B-A"
+			(at 71.9933 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Display:EA_DOGS104X-A"
+			(at 69.85 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.lcd-module.com/fileadmin/eng/pdf/doma/dogs104e.pdf"
+			(at 80.01 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "LCD 4x10 character display blue transmissive background, +3.3V VDD, I2C or SPI"
+			(at 69.85 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "10"
+			(uuid "7e2d1860-2c79-4424-8f13-1623aff6fde0")
+		)
+		(pin "2"
+			(uuid "a8db0424-1157-4a52-943e-58347faeab8d")
+		)
+		(pin "14"
+			(uuid "3b95ef22-311b-4d05-b816-4a3b75dda8c5")
+		)
+		(pin "19"
+			(uuid "9fd47c34-9ee9-46bf-8b31-4723c4e849a2")
+		)
+		(pin "13"
+			(uuid "fa89a041-6a33-44af-b8b5-a50a1d47ea48")
+		)
+		(pin "15"
+			(uuid "26d6a77b-c3d1-4b5b-995d-05e08ea63da2")
+		)
+		(pin "1"
+			(uuid "d5fba97a-7475-4eda-9814-36ef68bf0151")
+		)
+		(pin "17"
+			(uuid "650e4bd9-d4b5-4c6b-a4ca-7ded21b8234a")
+		)
+		(pin "9"
+			(uuid "5d1f08fc-b10b-4f96-81d1-49eb5d2b2e17")
+		)
+		(pin "20"
+			(uuid "68f854c8-e7b8-4ba2-960f-fbfcc1cfbc16")
+		)
+		(pin "16"
+			(uuid "676616b0-6df1-4c2d-ae48-f50e6a91553a")
+		)
+		(pin "11"
+			(uuid "0901637e-06af-42f4-963b-40fe30861ca3")
+		)
+		(pin "12"
+			(uuid "3aa84f45-ff2f-4bd2-b1f5-e76e7ce70887")
+		)
+		(pin "18"
+			(uuid "b1831c6e-15ce-488e-b105-fdfab5426cbc")
+		)
+		(instances
+			(project ""
+				(path "/cc5c0dcb-4b74-462c-86de-ed43f1f5f7f0"
+					(reference "U8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 203.2 27.94 0)
 		(unit 1)
@@ -5264,10 +5712,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e868")
+			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e869")
 		)
 		(pin "2"
-			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020b")
+			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020c")
 		)
 		(instances
 			(project ""
@@ -5404,10 +5852,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e868")
+			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e86a")
 		)
 		(pin "2"
-			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020b")
+			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020d")
 		)
 		(instances
 			(project ""
@@ -5558,10 +6006,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "51ce32c9-24e7-4029-a771-f753651d718f")
+			(uuid "51ce32c9-24e7-4029-a771-f753651d7190")
 		)
 		(pin "2"
-			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce36")
+			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce37")
 		)
 		(instances
 			(project ""
@@ -5765,10 +6213,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e868")
+			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e86b")
 		)
 		(pin "2"
-			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020b")
+			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020e")
 		)
 		(instances
 			(project ""
@@ -5833,10 +6281,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "951fccae-1f9a-48ba-9adb-a2a2cef2bab4")
+			(uuid "951fccae-1f9a-48ba-9adb-a2a2cef2bab5")
 		)
 		(pin "1"
-			(uuid "0332146f-1ca6-474e-8bca-b37d2c779321")
+			(uuid "0332146f-1ca6-474e-8bca-b37d2c779322")
 		)
 		(instances
 			(project ""
@@ -6217,6 +6665,112 @@
 		)
 	)
 	(symbol
+		(lib_id "Display_Graphic:EA_DOGS104B-A")
+		(at 93.98 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "805778e4-9299-4360-9e73-1bdef6eea3e7")
+		(property "Reference" "U7"
+			(at 96.1233 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "EA_DOGS104B-A"
+			(at 96.1233 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Display:EA_DOGS104X-A"
+			(at 93.98 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.lcd-module.com/fileadmin/eng/pdf/doma/dogs104e.pdf"
+			(at 104.14 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "LCD 4x10 character display blue transmissive background, +3.3V VDD, I2C or SPI"
+			(at 93.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "10"
+			(uuid "7e2d1860-2c79-4424-8f13-1623aff6fde0")
+		)
+		(pin "2"
+			(uuid "a8db0424-1157-4a52-943e-58347faeab8d")
+		)
+		(pin "14"
+			(uuid "3b95ef22-311b-4d05-b816-4a3b75dda8c5")
+		)
+		(pin "19"
+			(uuid "9fd47c34-9ee9-46bf-8b31-4723c4e849a2")
+		)
+		(pin "13"
+			(uuid "fa89a041-6a33-44af-b8b5-a50a1d47ea48")
+		)
+		(pin "15"
+			(uuid "26d6a77b-c3d1-4b5b-995d-05e08ea63da2")
+		)
+		(pin "1"
+			(uuid "d5fba97a-7475-4eda-9814-36ef68bf0151")
+		)
+		(pin "17"
+			(uuid "650e4bd9-d4b5-4c6b-a4ca-7ded21b8234a")
+		)
+		(pin "9"
+			(uuid "5d1f08fc-b10b-4f96-81d1-49eb5d2b2e17")
+		)
+		(pin "20"
+			(uuid "68f854c8-e7b8-4ba2-960f-fbfcc1cfbc16")
+		)
+		(pin "16"
+			(uuid "676616b0-6df1-4c2d-ae48-f50e6a91553a")
+		)
+		(pin "11"
+			(uuid "0901637e-06af-42f4-963b-40fe30861ca3")
+		)
+		(pin "12"
+			(uuid "3aa84f45-ff2f-4bd2-b1f5-e76e7ce70887")
+		)
+		(pin "18"
+			(uuid "b1831c6e-15ce-488e-b105-fdfab5426cbc")
+		)
+		(instances
+			(project ""
+				(path "/cc5c0dcb-4b74-462c-86de-ed43f1f5f7f0"
+					(reference "U7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "MCU_Espressif:ESP32-S2")
 		(at 107.95 74.93 0)
 		(unit 1)
@@ -6509,10 +7063,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "51ce32c9-24e7-4029-a771-f753651d718f")
+			(uuid "51ce32c9-24e7-4029-a771-f753651d7191")
 		)
 		(pin "2"
-			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce36")
+			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce38")
 		)
 		(instances
 			(project ""
@@ -6826,10 +7380,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e868")
+			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e86c")
 		)
 		(pin "2"
-			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020b")
+			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020f")
 		)
 		(instances
 			(project ""
@@ -6896,10 +7450,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "51ce32c9-24e7-4029-a771-f753651d718f")
+			(uuid "51ce32c9-24e7-4029-a771-f753651d7192")
 		)
 		(pin "2"
-			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce36")
+			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce39")
 		)
 		(instances
 			(project ""
@@ -6966,10 +7520,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "51ce32c9-24e7-4029-a771-f753651d718f")
+			(uuid "51ce32c9-24e7-4029-a771-f753651d7193")
 		)
 		(pin "2"
-			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce36")
+			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce3a")
 		)
 		(instances
 			(project ""
@@ -7171,10 +7725,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "51ce32c9-24e7-4029-a771-f753651d718f")
+			(uuid "51ce32c9-24e7-4029-a771-f753651d7194")
 		)
 		(pin "2"
-			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce36")
+			(uuid "d3b1cd13-ca34-4030-bba0-f07d8b29ce3b")
 		)
 		(instances
 			(project ""
@@ -7241,10 +7795,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e868")
+			(uuid "5e0a16cd-4d99-40c5-942b-6c518488e86d")
 		)
 		(pin "2"
-			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a020b")
+			(uuid "d6fd11e2-c67b-4cfc-b7c8-d6a64c5a0210")
 		)
 		(instances
 			(project ""
