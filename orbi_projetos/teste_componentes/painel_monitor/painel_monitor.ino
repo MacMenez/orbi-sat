@@ -18,6 +18,7 @@
 #define BT_B BOTAO_5     // Botão B - Botão 5
 
 /* CONFIGURÇÃO DO DISPLAY */
+#include <SPI.h>
 #include <Wire.h>             // Bibliotecas para Display OLED
 #include <Adafruit_GFX.h>     // Bibliotecas para Display OLED
 #include <Adafruit_SSD1306.h> // Bibliotecas para Display OLED
@@ -97,8 +98,7 @@ const unsigned char franzininho_logo_128x64[] PROGMEM = {
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
-    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff
-};
+    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
 
 unsigned long t_anterior_painel = 0;      // Variável global para armazenar o tempo da última leitura do botão
 const unsigned long intervaloBotao = 200; // Intervalo de tempo entre leituras do botão (em milissegundos)
@@ -141,9 +141,9 @@ void formatacaoDisplay()
 void painel_menu()
 {
     formatacaoDisplay(); // Formata o display para exibir as informações
-    display.println("ORBI ENGENIERS");
+    display.println("ESTACAO METEOROLOGICA");
     display.println("");
-    display.println("Satélite ORBI");
+    display.println("Trabalho IoT I");
     display.println("PUC Minas");
     display.println("");
     display.println("Qualquer tecla troca de painel"); // Instruções para utilizar a placa da Franzininho Wifi no projeto
@@ -268,42 +268,88 @@ void painel_info_solo()
     display.display(); // Faz com que toda informação de texto seja exibida no monitor
 }
 
-void menu(int opcao)
-{
-    switch (opcao)
-    {
-    case 1:
-        painel_menu();
-        break;
+void menu(int opcao){
+    switch (opcao){
+        case 1:
+            painel_menu();
+            break;
 
-    case 2:
-        painel_principal();
-        break;
+        case 2:
+            painel_principal();
+            break;
 
-    case 3:
-        painel_info_solar();
-        break;
+        case 3:
+            painel_info_solar();
+            break;
 
-    case 4:
-        painel_info_termometro();
-        break;
+        case 4:
+            painel_info_termometro();
+            break;
 
-    case 5:
-        painel_info_umidade();
-        break;
+        case 5:
+            painel_info_umidade();
+            break;
 
-    case 6:
-        painel_info_pluvial();
-        break;
+        case 6:
+            painel_info_pluvial();
+            break;
 
-    case 7:
-        painel_info_solo();
-        break;
+        case 7:
+            painel_info_solo();
+            break;
 
-    default:
-        formatacaoDisplay();
-        display.println("ERRO DE NO MENU! \nVerificar valores enviados");
-        display.display();
+        default:
+            formatacaoDisplay();
+            display.println("ERRO DE NO MENU! \nVerificar valores enviados");
+            display.display();
     }
 }
 /* FIM CONFIGURAÇÕES DO PAINEL OLED */
+
+void setup(){
+    /* INICIO CONFIGURAÇÕES DO PAINEL OLED */
+    // CONFIGURAÇÃO DISPLAY OLED - ATIVAÇÃO PINAGEM
+    display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // Inicializa o display OLED
+    display.display();                          // Inicializa o display com o buffer atual
+
+    // Mostra o logo da Franzininho como splash screen
+    display.clearDisplay();                                                            // Limpa a tela
+    display.drawBitmap(0, 0, franzininho_logo_128x64, imageWidth, imageWidth, WHITE);  // Desenha o logo da Franzininho
+    display.display();                                                                 // Atualiza o display
+    delay(2000);                                                                       // Espera 2 segundos
+
+    display.clearDisplay();  // Limpa a tela
+    display.display();       // Atualiza o display
+    delay(100);              // Pequeno atraso antes de começar a exibir os valores
+
+    // CONFIGURAÇÃO BOTÕES (TECLADO DE ESCOLHA) - ATIVAÇÃO PINAGEM
+    pinMode(BT_A, INPUT_PULLUP);      // Configura o pino do botão A como entrada com resistor de pull-up interno
+    pinMode(BT_B, INPUT_PULLUP);      // Configura o pino do botão B como entrada com resistor de pull-up interno
+    pinMode(BT_UP, INPUT_PULLUP);     // Configura o pino do botão CIMA como entrada com resistor de pull-up interno
+    pinMode(BT_DOWN, INPUT_PULLUP);   // Configura o pino do botão BAIXO como entrada com resistor de pull-up interno
+    pinMode(BT_RIGHT, INPUT_PULLUP);  // Configura o pino do botão DIREITA como entrada com resistor de pull-up interno
+    pinMode(BT_LEFT, INPUT_PULLUP);   // Configura o pino do botão ESQUERDAcomo entrada com resistor de pull-up interno
+  /* FIM CONFIGURAÇÕES DO PAINEL OLED */
+}
+
+void loop(){
+    /* INÍCIO MENU - PAINEL DE EXIBIÇÃO */
+    unsigned long milliasAtualPainel = millis();
+
+    Serial.print("Valor da variável opcaoMenu: ");
+    Serial.println(opcaoMenu);
+
+    menu(opcaoMenu); // Exibe o painel correspondente a opcaoMenu
+    if (milliasAtualPainel - t_anterior_painel >= intervaloBotao){
+        t_anterior_painel = milliasAtualPainel; // Atualiza o tempo da última leitura do botão
+        // Verifica se o botão foi pressionado (estado LOW) e efetua a mudança dos paineis de informação
+        if (digitalRead(BT_A) == LOW || digitalRead(BT_UP) == LOW || digitalRead(BT_LEFT) == LOW){ opcaoMenu--; }
+
+        if (digitalRead(BT_B) == LOW || digitalRead(BT_RIGHT) == LOW || digitalRead(BT_DOWN) == LOW){ opcaoMenu++; }
+
+        // Garante que os valores dos paineis permaneçam dentro dos limites
+        if (opcaoMenu > 7){ opcaoMenu = 1; }
+        else if (opcaoMenu < 1){ opcaoMenu = 7; }
+    }
+    /* FIM MENU - PAINEL DE EXIBIÇÃO */
+}
