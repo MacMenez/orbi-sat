@@ -1,3 +1,16 @@
+/*
+  MAPA DOS PINOS
+
+  BOTAO 2
+  BOTAO 3
+  BOTAO 4
+  BOTAO 5
+  BOTAO 6
+  BOTAO 7
+  PAINEL 8
+  PAINEL 9
+*/
+
 /* INÍCIO CONFIGURAÇÕES DO PAINEL OLED */
 /* MAPEAMENTO DE PINOS */
 #define OLED_SCL 9 // Pino SCL do OLED
@@ -141,9 +154,9 @@ void formatacaoDisplay()
 void painel_menu()
 {
     formatacaoDisplay(); // Formata o display para exibir as informações
-    display.println("ESTACAO METEOROLOGICA");
+    display.println("ORBI ENGENIEERS");
     display.println("");
-    display.println("Trabalho IoT I");
+    display.println("Orbisat");
     display.println("PUC Minas");
     display.println("");
     display.println("Qualquer tecla troca de painel"); // Instruções para utilizar a placa da Franzininho Wifi no projeto
